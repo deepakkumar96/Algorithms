@@ -4,9 +4,8 @@
 Source	: InterviewBit
 Type  	: Tree
 Link	: https://www.interviewbit.com/problems/largest-bst-subtree
-Question Description:
+Question: Largest BST Subtree
 
-Largest BST Subtree
 Given a binary tree. Find the size of largest subtree which is a Binary Search Tree (BST), where largest means subtree with the largest number of nodes in it. Note: A subtree must include all of its descendants. For Example
 Input 1:
                      10
