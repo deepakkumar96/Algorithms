@@ -70,7 +70,7 @@ Explanation 2:
     The path to be followed will be:
         1 -> 3 (Edge weight : 1)
     Total length of path = 1
-    
+
 
 ************************************* Solution ***************************************/
 
@@ -120,8 +120,3 @@ int Solution::solve(int n, vector<vector<int> > &edges, int source, int dest) {
     }
     return distances[dest];
 }
-
-int solve2(int A, vector<vector<int> > &B, int C, int D) {
-}
-
-
