@@ -63,10 +63,11 @@ typedef struct Node {
 
 class List {
 public:
-    push_front();
-    push_back();
-    pop_front();
-    pop_back();
+    Node* push_front();
+    Node* push_back();
+    void pop_front();
+    void pop_back();
+    void moveToFront(Node*);
 private:
     Node *head = nullptr;
     Node *tail = nullptr;
@@ -122,15 +123,23 @@ void List::pop_back() {
     }
 }
 
+void List::moveToFront(Node *node) {
+    if (head != tail) {
+        node->prev->next = node->next;
+        node->next->prev = node->prev;
+        node->next = head;
+        head = node;
+    }
+}
+
 unordered_map<int, Node*> nodeOfKey;
-Node *head;
-Node *tail;
+List list;
 int capacity;
 
 LRUCache::LRUCache(int N)
 {
-     capacity = n;
-     nodeOfKey.clear();
+    capacity = n;
+    nodeOfKey.clear();
 }
 
 /*Sets the key x with value y in the LRU cache */
@@ -139,11 +148,14 @@ void LRUCache::set(int x, int y)
     if (values.size() > capacity) {
         pop_back(tail);
     }
-    push_back();
+    Node *pushNodeRef = list.push_back(y);
+    nodeOfKey[x] = pushedNodeRef;
 }
 /*Returns the value of the key x if 
 present else returns -1 */
 int LRUCache::get(int x)
 {
-    //Your code here
+    Node *nodeRef = nodeOfKey[x];
+    list.moveToFront(nodeRef);
+    return nodeRef->val;
 }
