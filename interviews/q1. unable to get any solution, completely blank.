@@ -1,0 +1,37 @@
+q1. unable to get any solution, completely blank.
+q2. Hins affect or not
+q3. direct jump
+q2. behavioural questions or not.
+13. 
+
+
+1. Conflicts
+DB igrations
+
+2. Change in the company 
+Docs and Test
+Best practice: document, test and code
+Repetitive Integration : DSL
+
+3. Hard Bug:
+1. Delay login due to dependecy on other system. solve by making async.
+
+
+
+QUESTIONS TO ASK THE INTERVIEWER 
+
+LAST BUT NOT THE LEAST, when the interviewer asks you “Do you have any questions for me ?”, make sure you have at least one question ready for him. 
+
+Some interesting questions : 
+ 
+What are your views on <insert some recent feature of the company>. 
+
+I noticed that you use technology X. How do you handle problem Y ? 
+
+Why did the product choose to use the X protocol over the Y protocol ?
+
+How does X work where X is a very small component / piece about a feature ? For example, how does Facebook web chat maintain connections to the server ? Is it long polling behind the screens ? 
+
+How much time do you spend writing code everyday ? 
+
+How do teams discuss new ideas ? 
