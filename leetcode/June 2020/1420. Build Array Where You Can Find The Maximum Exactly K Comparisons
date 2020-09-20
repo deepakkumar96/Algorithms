@@ -1,0 +1,27 @@
+
+typedef long long int LL;
+
+class Solution {
+public:
+    int numOfArrays(int n, int m, int k) {
+        LL totalWays = 0;
+        for (int i = 1; i <= m; i++) {
+            if (i < k) {
+                continue;
+            }
+            //int start = min(k, i);
+            for (int j = k; j < n; j++) {
+                int leftBlocks = k - 1;
+                int rightBlocks = n - k;
+                LL leftPerm = permutation(j - 1, leftBlocks);
+                LL rightPerm = permutation(j, rightBlocks);
+                totalWays += (leftPerm * rightPerm);
+            }
+
+        }
+    }
+
+    LL permutation(int nums, int blocks) {
+        return pow(nums, blocks);
+    }
+};

@@ -1,0 +1,64 @@
+    /**
+ * Definition for a binary tree node.
+ * struct TreeNode {
+ *     int val;
+ *     TreeNode *left;
+ *     TreeNode *right;
+ *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
+ * };
+ */
+
+typedef struct node{
+    int val;
+    int level;
+    
+    node(int v, int l): val(v), level(l) { }
+} Node;
+
+class Solution {
+public:
+    TreeNode* recoverFromPreorder(string str) {
+        vector<Node> nodes = buildNodes(str);
+        //for (auto node: nodes) cout << node.val << " " << node.level << endl;
+        unordered_map<int, TreeNode*> mapping;
+        for (const Node &node: nodes) {
+            TreeNode* parent = mapping[node.level  - 1];
+            TreeNode* newNode = new TreeNode(node.val);
+            if (parent) {
+                if (!parent->left) {
+                    parent->left = newNode;
+                } else {
+                    parent->right = newNode;
+                }
+            }
+            mapping[node.level] = newNode;
+        }
+        
+        return mapping[0];
+    }
+    
+    vector<Node> buildNodes(string str) {
+        int lastDashCount = 0;
+        int i = 0;
+        int n = str.length();
+        vector<Node> nodes;
+        
+        while (i < n) {
+            if (str[i] == '-') { // if dash turn
+                int start = i;
+                while (i < n && str[i] == '-') i++;
+                lastDashCount = i - start;
+            } else {
+                int num = 0;
+                while (i < n && str[i] != '-') {
+                    num = (num * 10) + (str[i] - '0');
+                    i++;
+                }
+                nodes.push_back(Node(num, lastDashCount));
+            }
+        }
+        return nodes;
+    }
+};

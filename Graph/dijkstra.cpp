@@ -81,7 +81,7 @@ vector<int> Graph::findShortestPath(int source, int dest) {
 	vector<int> path = distAndPath.second;
 	vector<int> shortestPath;
 	if (distance[dest] == INT_MAX) {
-		return shortestPath;
+		return shortestPath; //no path found return empty path
 	}
 	shortestPath.push_back(dest); // add destination	
 	for (int i = dest; i != -1; i = path[i]) {

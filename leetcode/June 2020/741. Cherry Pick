@@ -1,0 +1,8 @@
+class Solution {
+public:
+    int cherryPickup(vector<vector<int>>& grid) {
+        int rows = grid.size();
+        int cols = grid[0].size();
+        return findBottomUpMaxPath(grid, rows - 1, cols - 1, 0) + findTopDownMaxPath(grid, 0, 0, 0);
+    }
+};

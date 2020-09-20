@@ -1,0 +1,46 @@
+/*
+
+Given a m x n binary matrix mat. In one step, you can choose one cell and flip it and all the four neighbours of it if they exist (Flip is changing 1 to 0 and 0 to 1). A pair of cells are called neighboors if they share one edge.
+
+Return the minimum number of steps required to convert mat to a zero matrix or -1 if you cannot.
+
+Binary matrix is a matrix with all cells equal to 0 or 1 only.
+
+Zero matrix is a matrix with all cells equal to 0.
+
+*/
+
+class Solution {
+public:
+    int minFlips(vector<vector<int>>& mat) {
+        int m = mat.size();
+        if (m == 0) {
+            return 0;
+        }
+        int n = mat[0].size();
+        int oneCount = 0;
+        for (int i = 0; i < m; i++) {
+            for (int j = 0; j < n; j++) {
+                if (mat[i][j] == 1) {
+                    oneCount++;
+                }
+            }
+        }
+        return minOpr(mat, m, n, oneCount);
+    }
+
+    int minOpr(vector<vector<int>> &M, int m, int n, int oneCount) {
+        if (oneCount == 0) {
+            return 0;
+        }
+        int opr = INT_MAX;
+        for (int i = 0; i < m; i++) {
+            for (int j = 0; j < n; j++) {
+                int newCount = flip(M, i, j, m, n);
+                opr = min(opr, minOpr(M, m, n, oneCount + newCount));
+                flipCount(M, i, j, m, n);
+            }
+        }
+        return opr;
+    }
+};
