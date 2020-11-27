@@ -6,9 +6,6 @@
 
 using namespace std;
 
-
-
-
   //Definition for a binary tree node.
   struct TreeNode {
       int val;
@@ -18,34 +15,38 @@ using namespace std;
   };
 
 
-    TreeNode* findInOrderPredecessor(TreeNode *node) {
-        auto itr = node->left;
-        while (itr->right != nullptr && itr->right != node) {
-            itr = itr->right;
-        }
-        return itr;
-    }
-
-    vector<int> inorderTraversal(TreeNode* root) {
-        vector<int> preorderTraversal;
-        auto currNode = root;
-        while (currNode != nullptr) {
-            if (currNode->left == nullptr) {
-                preorderTraversal.push_back(currNode->val);
-                currNode = currNode->right;
-            } else {
-                auto predecessor = findInOrderPredecessor(currNode);
-                if (predecessor->right == nullptr) {
-                    predecessor->right = currNode;
-                    currNode = currNode->left;
+    vector<int> morrisInOrderTraversal(TreeNode *root) {
+        vector<int> res;
+        TreeNode *current = root;
+        while (current != nullptr) {
+            if (current->left == nullptr) {
+                res.push_back(current->val);
+                current = current->right;
+            }  else {
+                TreeNode *predecessor = findPredecessor(current);
+                if (predecessor->right == nullptr) { // if not predecessor not linked to current
+                    // link predecessor to current node
+                    predecessor->right = current;
+                    current = current->left;
                 } else {
+                    // unlink predecessor to current
                     predecessor->right = nullptr;
-                    preorderTraversal.push_back(currNode->val);
-                    currNode = currNode->right;
+                    //process current node (in case of inorder traversal)
+                    res.push_back(current->val);
+                    current = current->right;
                 }
             }
         }
-        return preorderTraversal;
+        return res;
+    }
+    
+    TreeNode *findPredecessor(TreeNode *root) {
+        TreeNode *node = root->left;
+        // `node->right != root` condition is added to avoid infinite loop in-case when predecessor is already linked to root
+        while (node->right != nullptr && node->right != root) {
+            node = node->right;
+        }
+        return node;
     }
 
 
