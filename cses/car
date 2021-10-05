@@ -1,0 +1,5 @@
+#!/bin/bash
+objectName=`echo "$1" | cut -f1 -d"."`
+echo "ob name : $objectName"
+g++ $1 -o $objectName
+./$objectName
