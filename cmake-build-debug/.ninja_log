@@ -1,0 +1,8 @@
+# ninja log v5
+454	524	1644747712341790505	Algorithms	b02c5e48b94ad353
+0	454	1644747712273790363	CMakeFiles/Algorithms.dir/cses/Sortng_and_Searchig/room_allocation.cpp.o	753ca575d002100c
+0	19	1644747734885837453	build.ninja	63b196371e94ec71
+0	791	1645280907176380346	CMakeFiles/Algorithms.dir/cses/Sortng_and_Searchig/room_allocation.cpp.o	753ca575d002100c
+791	872	1645280907256380570	Algorithms	b02c5e48b94ad353
+0	613	1645281792598663105	CMakeFiles/Algorithms.dir/cses/Sortng_and_Searchig/room_allocation.cpp.o	753ca575d002100c
+613	670	1645281792658663250	Algorithms	b02c5e48b94ad353
