@@ -11,7 +11,7 @@ void removeIfPossible(int startInvl, multiset<pair<int, int>> &coll, set<int> &e
 	set<pair<int, int> >::iterator remIt = coll.lower_bound({startInvl, 0});
 	auto begIt = coll.begin();
 	while (begIt != remIt) {
-		emptyRooms.insert(( sti*begIt).second);
+		emptyRooms.insert(( *begIt).second);
 		begIt = coll.erase(begIt);
 	}
 }

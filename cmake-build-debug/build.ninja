@@ -72,11 +72,11 @@ build edit_cache: phony CMakeFiles/edit_cache.util
 
 build cmake_object_order_depends_target_Algorithms: phony || CMakeFiles/Algorithms.dir
 
-build CMakeFiles/Algorithms.dir/cses/Sortng_and_Searchig/room_allocation.cpp.o: CXX_COMPILER__Algorithms_Debug /home/deepaksonava/Documents/projects/my/Algorithms/cses/Sortng_and_Searchig/room_allocation.cpp || cmake_object_order_depends_target_Algorithms
-  DEP_FILE = CMakeFiles/Algorithms.dir/cses/Sortng_and_Searchig/room_allocation.cpp.o.d
+build CMakeFiles/Algorithms.dir/debug/RunTest.cpp.o: CXX_COMPILER__Algorithms_Debug /home/deepaksonava/Documents/projects/my/Algorithms/debug/RunTest.cpp || cmake_object_order_depends_target_Algorithms
+  DEP_FILE = CMakeFiles/Algorithms.dir/debug/RunTest.cpp.o.d
   FLAGS = -g -std=gnu++14
   OBJECT_DIR = CMakeFiles/Algorithms.dir
-  OBJECT_FILE_DIR = CMakeFiles/Algorithms.dir/cses/Sortng_and_Searchig
+  OBJECT_FILE_DIR = CMakeFiles/Algorithms.dir/debug
 
 
 # =============================================================================
@@ -86,7 +86,7 @@ build CMakeFiles/Algorithms.dir/cses/Sortng_and_Searchig/room_allocation.cpp.o: 
 #############################################
 # Link the executable Algorithms
 
-build Algorithms: CXX_EXECUTABLE_LINKER__Algorithms_Debug CMakeFiles/Algorithms.dir/cses/Sortng_and_Searchig/room_allocation.cpp.o
+build Algorithms: CXX_EXECUTABLE_LINKER__Algorithms_Debug CMakeFiles/Algorithms.dir/debug/RunTest.cpp.o
   FLAGS = -g
   OBJECT_DIR = CMakeFiles/Algorithms.dir
   POST_BUILD = :

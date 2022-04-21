@@ -3,4 +3,4 @@ project(Algorithms)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(Algorithms cses/Sortng_and_Searchig/room_allocation.cpp)
+add_executable(Algorithms debug/RunTest.cpp)
