@@ -3,4 +3,4 @@ project(Algorithms)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(Algorithms debug/RunTest.cpp)
+add_executable(Algorithm cses/Sortng_and_Searchig/sliding_median.cpp)

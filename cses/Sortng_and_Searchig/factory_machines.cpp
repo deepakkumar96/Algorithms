@@ -13,13 +13,12 @@ bool isPossibleToMake(const vector<long long int> &ms, long long int mid, long l
 	return totalProducts >= productsReq;
 }
 
-long long minTimeReqToMake(const vector<long long int> &ms, long long int sml, long long int t) {
+long long minTimeReqToMake(const vector<long long int> &ms, long long int sml, long long int n, long long int t) {
 	long long maxTime = sml * t;
-	long long minTime = 1;
+	long long minTime = t / n;
 
 	while (minTime < maxTime) {
 		long long mid = minTime + ((maxTime - minTime) / 2);
-		//cout << mid << " " << minTime << " " << maxTime << endl;
 		if (isPossibleToMake(ms, mid, t)) {
 			maxTime = mid;
 		} else {
@@ -38,6 +37,6 @@ int main () {
 		cin >> ms[i];
 		sml = min(sml, ms[i]);
 	}
-	cout << minTimeReqToMake(ms, sml, t);
+	cout << minTimeReqToMake(ms, sml, n, t);
 	return 0;
 }

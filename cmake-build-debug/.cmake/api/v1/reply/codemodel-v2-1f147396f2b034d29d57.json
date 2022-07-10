@@ -38,9 +38,9 @@
 			[
 				{
 					"directoryIndex" : 0,
-					"id" : "Algorithms::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-Algorithms-Debug-000a02db9bfdfca311f6.json",
-					"name" : "Algorithms",
+					"id" : "Algorithm::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Algorithm-Debug-a39b8f64dba21b504c77.json",
+					"name" : "Algorithm",
 					"projectIndex" : 0
 				}
 			]

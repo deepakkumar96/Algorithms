@@ -1,3 +1,3 @@
 /home/deepaksonava/Documents/projects/my/Algorithms/cmake-build-debug/CMakeFiles/rebuild_cache.dir
 /home/deepaksonava/Documents/projects/my/Algorithms/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/deepaksonava/Documents/projects/my/Algorithms/cmake-build-debug/CMakeFiles/Algorithms.dir
+/home/deepaksonava/Documents/projects/my/Algorithms/cmake-build-debug/CMakeFiles/Algorithm.dir

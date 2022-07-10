@@ -64,35 +64,35 @@ build CMakeFiles/edit_cache.util: CUSTOM_COMMAND
 build edit_cache: phony CMakeFiles/edit_cache.util
 
 # =============================================================================
-# Object build statements for EXECUTABLE target Algorithms
+# Object build statements for EXECUTABLE target Algorithm
 
 
 #############################################
-# Order-only phony target for Algorithms
+# Order-only phony target for Algorithm
 
-build cmake_object_order_depends_target_Algorithms: phony || CMakeFiles/Algorithms.dir
+build cmake_object_order_depends_target_Algorithm: phony || CMakeFiles/Algorithm.dir
 
-build CMakeFiles/Algorithms.dir/debug/RunTest.cpp.o: CXX_COMPILER__Algorithms_Debug /home/deepaksonava/Documents/projects/my/Algorithms/debug/RunTest.cpp || cmake_object_order_depends_target_Algorithms
-  DEP_FILE = CMakeFiles/Algorithms.dir/debug/RunTest.cpp.o.d
+build CMakeFiles/Algorithm.dir/cses/Sortng_and_Searchig/sliding_median.cpp.o: CXX_COMPILER__Algorithm_Debug /home/deepaksonava/Documents/projects/my/Algorithms/cses/Sortng_and_Searchig/sliding_median.cpp || cmake_object_order_depends_target_Algorithm
+  DEP_FILE = CMakeFiles/Algorithm.dir/cses/Sortng_and_Searchig/sliding_median.cpp.o.d
   FLAGS = -g -std=gnu++14
-  OBJECT_DIR = CMakeFiles/Algorithms.dir
-  OBJECT_FILE_DIR = CMakeFiles/Algorithms.dir/debug
+  OBJECT_DIR = CMakeFiles/Algorithm.dir
+  OBJECT_FILE_DIR = CMakeFiles/Algorithm.dir/cses/Sortng_and_Searchig
 
 
 # =============================================================================
-# Link build statements for EXECUTABLE target Algorithms
+# Link build statements for EXECUTABLE target Algorithm
 
 
 #############################################
-# Link the executable Algorithms
+# Link the executable Algorithm
 
-build Algorithms: CXX_EXECUTABLE_LINKER__Algorithms_Debug CMakeFiles/Algorithms.dir/debug/RunTest.cpp.o
+build Algorithm: CXX_EXECUTABLE_LINKER__Algorithm_Debug CMakeFiles/Algorithm.dir/cses/Sortng_and_Searchig/sliding_median.cpp.o
   FLAGS = -g
-  OBJECT_DIR = CMakeFiles/Algorithms.dir
+  OBJECT_DIR = CMakeFiles/Algorithm.dir
   POST_BUILD = :
   PRE_LINK = :
-  TARGET_FILE = Algorithms
-  TARGET_PDB = Algorithms.dbg
+  TARGET_FILE = Algorithm
+  TARGET_PDB = Algorithm.dbg
 
 # =============================================================================
 # Target aliases.
@@ -105,7 +105,7 @@ build Algorithms: CXX_EXECUTABLE_LINKER__Algorithms_Debug CMakeFiles/Algorithms.
 #############################################
 # Folder: /home/deepaksonava/Documents/projects/my/Algorithms/cmake-build-debug
 
-build all: phony Algorithms
+build all: phony Algorithm
 
 # =============================================================================
 # Built-in targets
