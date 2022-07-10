@@ -2,34 +2,45 @@
 #include <vector>
 #include <algorithm>
 #include <climits>
+#include <set>
 
 using namespace std;
 
 
 int main () {
 	int n,a,b;
-	cin n >> a >> b;
-	vector<int> psum(n + 1, 0);
-	psum[0] = 0;
+	cin >> n >> a >> b;
+	vector<long long> psum(n, 0);
+	//psum[0] = 0;
 	int x;
-	for (int i = 1; i <= n; i++) {
+    long long sum = 0;
+	for (int i = 0; i < n; i++) {
 		cin >> x;
-		psum[i] = psum[i - 1] + x;
+        sum += x;
+		psum[i] = sum;
 	}
-	multiset<long long, greater<long long>> mset; // decereasing order
-	int len = b - a;
-	for (int i = 0; i < len; i++) {
-		mset.insert(psum[i]);
+	multiset<long long, greater<>> mset; // decereasing order
+	int i = 0;
+	int j = a - 1;
+	int k = b - 1;
+
+	for (int l = j; l <= min(n,k); l++) {
+		mset.insert(psum[l]);
 	}
 	long long maxSum = *mset.begin();
-	int j = len;
-	for (int i = 1; i < n; i++) {
-		mset.erase(mset.find(psum[i - 1]));
-		if (j < n) {
-			mset.insert(psum[j]);
-			j++;
+	i++;
+	k++;
+	//cout << max
+	while ((n - i + 1) >= a) {
+		mset.erase(mset.find(psum[j]));	
+		if (k < n) {
+			mset.insert(psum[k]);
+			k++;
 		}
-		maxSum = max(*mset.begin() - psum[i -1]);
+        if (!mset.empty())
+		    maxSum = max(*mset.begin() - psum[i - 1], maxSum);
+		i++;
+		j++;
 	}
 	cout << maxSum << endl;
 	return 0;

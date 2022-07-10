@@ -1,9 +1,17 @@
 # ninja log v5
+397	445	1657368693620843743	Algorithm	a462759377a1c397
 344	400	1650566649987188607	Algorithms	6291a2c9e4e5e5f
 0	635	1650566087654876024	CMakeFiles/Algorithms.dir/cses/Sortng_and_Searchig/room_allocation.cpp.o	753ca575d002100c
-0	14	1657368386615189900	build.ninja	63b196371e94ec71
-1	344	1650566649931188576	CMakeFiles/Algorithms.dir/debug/RunTest.cpp.o	4b03eb9a47d00040
-0	955	1657368398867255890	CMakeFiles/Algorithm.dir/cses/Sortng_and_Searchig/sliding_median.cpp.o	6b0b111908a81877
-956	1370	1657368399283258131	Algorithm	a462759377a1c397
+0	14	1657431644261889658	build.ninja	63b196371e94ec71
 1	397	1657368693572843485	CMakeFiles/Algorithm.dir/cses/Sortng_and_Searchig/sliding_median.cpp.o	6b0b111908a81877
-397	445	1657368693620843743	Algorithm	a462759377a1c397
+1	344	1650566649931188576	CMakeFiles/Algorithms.dir/debug/RunTest.cpp.o	4b03eb9a47d00040
+0	558	1657431648637907106	CMakeFiles/Algorithm.dir/cses/Sortng_and_Searchig/max_sub_array_sum_2.cpp.o	1cef507de1852073
+559	666	1657431648757907584	Algorithm	93b1ddb6b2db7cc5
+1	573	1657431837886647002	CMakeFiles/Algorithm.dir/cses/Sortng_and_Searchig/max_sub_array_sum_2.cpp.o	1cef507de1852073
+574	676	1657431837986647385	Algorithm	93b1ddb6b2db7cc5
+1	586	1657431897430874301	CMakeFiles/Algorithm.dir/cses/Sortng_and_Searchig/max_sub_array_sum_2.cpp.o	1cef507de1852073
+586	663	1657431897506874590	Algorithm	93b1ddb6b2db7cc5
+0	572	1657432608101599709	CMakeFiles/Algorithm.dir/cses/Sortng_and_Searchig/max_sub_array_sum_2.cpp.o	1cef507de1852073
+572	643	1657432608173599982	Algorithm	93b1ddb6b2db7cc5
+1	615	1657432807346331931	CMakeFiles/Algorithm.dir/cses/Sortng_and_Searchig/max_sub_array_sum_2.cpp.o	1cef507de1852073
+615	691	1657432807418332192	Algorithm	93b1ddb6b2db7cc5
